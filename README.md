@@ -1,4 +1,4 @@
-# Kala-Kashta (काष्ठ-कला) 🪵✨
+# Kala-Kashta🪵✨
 ### *The Digital Artisan Catalog & Material Estimator*
 
 **Kala-Kashta** is a high-fidelity Android application designed specifically for local carpenters and micro-furniture businesses. It bridges the gap between traditional craftsmanship and modern design expectations by providing a fluid, visual-heavy catalog, a mathematical estimation engine, and a digital project portfolio.
