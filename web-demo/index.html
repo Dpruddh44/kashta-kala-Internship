@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kala-Kashta | Artisan Design Catalog</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="glass-nav">
+        <div class="logo">KALA<span>KASHTA</span></div>
+        <div class="nav-links">
+            <a href="#inspiration" class="active">Inspire</a>
+            <a href="#workbench">Workbench</a>
+            <a href="#ledger">Ledger</a>
+            <a href="#portfolio">Craftbook</a>
+        </div>
+    </nav>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="hero">
+            <div class="hero-content">
+                <h1>Crafting Traditions <br>for <span>Modern Spaces</span></h1>
+                <p>The elite catalog for bespoke wooden furniture and mathematical precision.</p>
+                <div class="hero-btns">
+                    <a href="#inspiration" class="btn-primary">View Designs</a>
+                    <a href="#workbench" class="btn-secondary">Start Estimator</a>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <img src="assets/hero.png" alt="Handcrafted Sofa">
+                <div class="glow-orb"></div>
+            </div>
+        </section>
+
+        <!-- Inspiration Section -->
+        <section id="inspiration">
+            <div class="section-header">
+                <h2>Design <span>Inspiration</span></h2>
+                <p>High-resolution modern furniture archetypes.</p>
+            </div>
+            <div class="filter-row">
+                <button class="filter-chip active" data-filter="all">All</button>
+                <button class="filter-chip" data-filter="sofa">Sofas</button>
+                <button class="filter-chip" data-filter="bed">Beds</button>
+                <button class="filter-chip" data-filter="cabinet">Cabinets</button>
+                <button class="filter-chip" data-filter="table">Tables</button>
+            </div>
+            <div class="masonry-grid" id="grid">
+                <!-- JS will inject items here -->
+            </div>
+        </section>
+
+        <!-- Workbench Section -->
+        <section id="workbench">
+            <div class="workbench-container">
+                <div class="workbench-ui">
+                    <h2>The <span>Workbench</span></h2>
+                    <p>Enter dimensions to calculate material area.</p>
+                    
+                    <div class="input-grid">
+                        <div class="gauge-field">
+                            <label>Length (cm)</label>
+                            <input type="number" id="length" placeholder="0" value="120">
+                        </div>
+                        <div class="gauge-field">
+                            <label>Width (cm)</label>
+                            <input type="number" id="width" placeholder="0" value="60">
+                        </div>
+                    </div>
+
+                    <div class="timber-selector">
+                        <label>Material Type</label>
+                        <select id="timber">
+                            <option value="350">Teak (सागौन) - ₹350/sq.ft</option>
+                            <option value="280">Sheesham (शीशम) - ₹280/sq.ft</option>
+                            <option value="85">Plywood (प्लाइवुड) - ₹85/sq.ft</option>
+                            <option value="55">MDF (एमडीएफ) - ₹55/sq.ft</option>
+                        </select>
+                    </div>
+
+                    <button id="calc-btn" class="glow-btn">CALCULATE AREA</button>
+                </div>
+
+                <div class="workbench-result" id="result-box">
+                    <div class="result-label">ESTIMATED AREA</div>
+                    <div class="result-value"><span id="res-sqft">0.00</span> <span>sq.ft</span></div>
+                    <div class="divider"></div>
+                    <div class="result-label">MATERIAL COST</div>
+                    <div class="price-value">₹<span id="res-cost">0</span></div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Kala-Kashta Artisan App. Premium Android & Web Experiences.</p>
+    </footer>
+
+    <script src="js/app.js"></script>
+</body>
+</html>
