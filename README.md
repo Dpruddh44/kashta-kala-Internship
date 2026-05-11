@@ -64,6 +64,6 @@ The project also includes a **Web Demo** in the `/web-demo` folder. This is a hi
 ---
 
 ## 👨‍💻 Built for
-*Android Developer Internship - Artisan Tech Prototype*
+*Android App Development Using Gen AI- MindMatrix*
 
 *"Traditional art meets modern code."*
