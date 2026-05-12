@@ -87,21 +87,27 @@ class InspirationEngine : ViewModel() {
     }
 
     private fun generateDemoItems(query: String): List<InspirationItem> {
-        val tags = listOf(
-            "modern sofa", "wooden bed frame", "oak cabinet",
-            "dining table wood", "designer chair", "bookshelf walnut",
-            "teak wardrobe", "coffee table marble", "kitchen island wood",
-            "living room furniture", "minimalist desk", "rustic bench"
+        val demoPhotos = listOf(
+            "1555041469-c246c762c6be" to "Modern Velvet Sofa",
+            "1524758631624-e2822e304c36" to "Scandinavian Workspace",
+            "1540518614846-7eded433c457" to "Minimalist Bed Frame",
+            "1538688549896-f82bc8d4ad16" to "Designer Lounge Chair",
+            "1503602642632-da151f1c9981" to "Solid Oak Dining Table",
+            "1567016432779-094069958ea5" to "Walnut Cabinet Set",
+            "1586023492125-27b2c045efd7" to "Ergonomic Desk",
+            "1556228453-efd6c1ff04f6" to "Luxury Living Setup",
+            "1592078615290-033ee584e267" to "Contemporary Armchair"
         )
-        return tags.mapIndexed { idx, tag ->
+
+        return demoPhotos.mapIndexed { idx, (id, title) ->
             InspirationItem(
                 uid = "demo_$idx",
-                title = tag.replaceFirstChar { it.uppercase() },
+                title = title,
                 family = FurnitureFamily.ALL,
-                fullUrl = "https://source.unsplash.com/featured/800x${(900 + idx * 50)}/?$tag",
-                thumbUrl = "https://source.unsplash.com/featured/400x${(450 + idx * 25)}/?$tag",
-                artist = "Kala-Kashta",
-                ratio = listOf(1.0f, 1.3f, 0.9f, 1.5f, 1.1f, 1.4f)[idx % 6]
+                fullUrl = "https://images.unsplash.com/photo-$id?auto=format&fit=crop&q=80&w=1000",
+                thumbUrl = "https://images.unsplash.com/photo-$id?auto=format&fit=crop&q=60&w=400",
+                artist = "Featured Artisan",
+                ratio = listOf(1.3f, 0.8f, 1.1f, 1.4f, 1.0f, 0.9f, 1.5f, 1.2f, 1.0f)[idx % 9]
             )
         }
     }
